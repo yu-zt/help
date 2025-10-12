@@ -8,8 +8,9 @@
     <meta name="description" content="Umorsite 是一款强大、免费的在线多轨音频编辑器，专为播客制作和内容创作者设计。学习如何使用我们的工具来提升您的音频创作效率。">
     <meta name="keywords" content="Umorsite帮助, 在线音频编辑器教程, 音频编辑指南, 播客制作技巧, 语音合成教程">
     <title>Umorsite 使用帮助</title>
-    <!-- 使用 Bootstrap 4 的 CSS 网格系统和基础样式，但不使用其 JS 组件 -->
+
     <link rel="stylesheet" href="./bootstrap.min.css">
+
 </head>
 
 <body>
@@ -17,15 +18,18 @@
         <div class="container pt-5 pb-5">
 
             <!-- 页面主标题 -->
-            <div class="text-center my-5">
-                <h1 class="help-title">使用帮助</h1>
-                <p class="help-subtitle">在这里找到您需要的一切，让创作之旅更加顺畅。</p>
+            <div class="text-center my-5 d-flex  justify-content-end">
+                <div class="help-title w-75" style="text-align: start;">
+                    <h1>使用帮助</h1>
+                    <p class="help-subtitle">在这里找到您需要的一切，让创作之旅更加顺畅。</p>
+                </div>
+
             </div>
 
             <!-- 搜索栏 -->
-            <!-- <div class="search-container mb-5">
-                <input type="search" id="help-search-input" class="form-control" placeholder="输入关键词搜索帮助内容...">
-            </div> -->
+            <div class="search-container mb-5 w-100 d-flex justify-content-end">
+                <input type="search" id="help-search-input" class="form-control  w-75" placeholder="输入关键词搜索帮助内容...">
+            </div>
 
 
             <!-- 帮助页面框架开始 -->
@@ -414,7 +418,7 @@
                         <h2>导出项目</h2>
 
                         <!--  4 -->
-                        <div class="help-card">
+                        <div class="help-card" id="subsection-exporting-main">
 
                             <h5>如何将我的项目导出为单个音频文件（如 MP3, WAV）？</h5>
                             <p>当您完成所有编辑后，可以轻松地将整个项目导出为一个完整的音频文件。</p>
@@ -451,7 +455,7 @@
                         <h2>常见问题</h2>
 
                         <!--  5 -->
-                        <div class="help-card">
+                        <div class="help-card" id="subsection-faq-main">
 
                             <h5>Umorsite 支持哪些浏览器？</h5>
                             <ul>
@@ -503,41 +507,59 @@
         </div>
     </div>
 
-    <!-- 简单的页面内搜索脚本 -->
-    <script src="./bootstrap.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./bootstrap.min.js"></script> -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById('help-search-input');
             const contentArea = document.getElementById('help-content-area');
-            const helpCards = contentArea.querySelectorAll('.help-card');
-            const helpSections = contentArea.querySelectorAll('.help-section');
+            const allCards = contentArea.querySelectorAll('.help-card');
+
+            // 为每个卡片存储原始的 HTML 内容，以便清除高亮
+            allCards.forEach(card => {
+                card.dataset.originalHtml = card.innerHTML;
+            });
 
             searchInput.addEventListener('input', function (e) {
-                const searchTerm = e.target.value.toLowerCase();
+                const searchTerm = e.target.value.trim();
 
-                // 遍历所有内容卡片
-                helpCards.forEach(card => {
-                    const cardText = card.textContent.toLowerCase();
-                    if (cardText.includes(searchTerm)) {
-                        card.style.display = 'block'; // 如果匹配，显示卡片
-                    } else {
-                        card.style.display = 'none'; // 否则，隐藏卡片
-                    }
+                // 恢复所有卡片的原始HTML，清除之前的高亮
+                allCards.forEach(card => {
+                    card.innerHTML = card.dataset.originalHtml;
                 });
 
-                // 遍历所有分类标题
-                helpSections.forEach(section => {
-                    // 检查这个分类下是否还有可见的卡片
-                    const isAnyCardVisible = section.querySelector('.help-card[style*="display: block"]');
-                    if (isAnyCardVisible || searchTerm === '') {
-                        section.style.display = 'block'; // 如果有可见卡片或搜索为空，显示整个section
-                    } else {
-                        section.style.display = 'none'; // 否则，隐藏整个section
-                    }
+                if (searchTerm === '') {
+                    // 如果搜索词为空，显示所有内容
+                    allCards.forEach(card => card.style.display = 'block');
+                } else {
+                    // 如果有搜索词，则进行筛选和高亮
+                    const searchRegex = new RegExp(searchTerm, 'gi'); // g:全局, i:不区分大小写
+
+                    allCards.forEach(card => {
+                        const cardText = card.innerText;
+
+                        if (cardText.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            card.style.display = 'block';
+                            // 高亮匹配的文本
+                            card.innerHTML = card.dataset.originalHtml.replace(searchRegex, (match) => `<mark>${match}</mark>`);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+
+                // (可选) 更新章节标题的可见性
+                document.querySelectorAll('.help-section').forEach(section => {
+                    const visibleCards = section.querySelectorAll('.help-card[style*="display: block"]');
+                    section.style.display = visibleCards.length > 0 ? 'block' : 'none';
                 });
             });
         });
     </script>
+
+
 </body>
 
 <style>
@@ -596,13 +618,28 @@
 
     /* 搜索栏样式 */
     .search-container {
-        max-width: 700px;
+        /* --- 新增的粘性定位属性 --- */
+        position: -webkit-sticky;
+        /* 兼容 Safari 浏览器 */
+        position: sticky;
+        border-radius: 5px;
+        top: 0;
+        /* 滚动到距离顶部为0时开始固定 */
+        z-index: 1000;
+        /* 确保它在最顶层，不会被其他内容遮盖 */
+
+        /* --- 为了美观，添加背景色和内边距 --- */
+        /* background-color: #1a1a2e; */
+        /* 添加和页面背景色一致的颜色，防止下方内容透过来 */
+        padding: 1rem 0;
+        /* --- 原有的样式保持不变 --- */
+        min-width: 700px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .search-container .form-control {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(28, 30, 33);
         border: 1px solid var(--card-border-color);
         color: var(--text-primary);
         padding: 1.5rem 1rem;
@@ -725,6 +762,15 @@
 
     .help-tip p {
         margin-bottom: 0;
+    }
+
+    mark {
+        background-color: var(--main-color) !important;
+        /* 使用了您主题中的主色调 */
+        color: #121212 !important;
+        /* 深色文字以保证对比度 */
+        padding: 2px 4px !important;
+        border-radius: 3px !important;
     }
 </style>
 

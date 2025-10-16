@@ -107,9 +107,51 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#subsection-timeline-edit">时间线编辑</a>
+                                        <ul class="nav flex-column sub-nav">
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-1">
+                                                    排列音频</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-2">
+                                                    裁剪音频</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-3">分割音频</a>
+                                            </li>
+
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-4">删除音频</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-5">淡入淡出</a>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-timeline-6">滚动和缩放时间线</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="#subsection-track-edit">音轨操作</a>
+                                        <ul class="nav flex-column sub-nav">
+                                            <li class="nav-item"><a class="nav-link" href="#sub-track-1">
+                                                    编辑音轨</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-track-2">
+                                                    音轨音量</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-track-3">左右声道</a>
+                                            </li>
+
+                                            <li class="nav-item"><a class="nav-link" href="#sub-track-4">静音和独奏</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-track-4">音量曲线</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li class="nav-item"><a class="nav-link" href="#subsction-advanced-mode">高级模式</a>
+                                        <ul class="nav flex-column sub-nav">
+                                            <li class="nav-item"><a class="nav-link" href="#sub-advanced-1">
+                                                    涟漪编辑</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#sub-advanced-2">
+                                                    滑移工具</a>
+                                            </li>
+
+
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
@@ -165,9 +207,9 @@
                                 <h5>如何导入我自己的音频文件（如录音、音乐）？</h5>
                                 <ul>
                                     <li>
-                                        如果您已经有录音文件，可以将音频文件拖拽到时间线上。或使用文件选择器。<img style="height:50px"
-                                            src="./image/openfile.png" alt="">
-                                        <img class="w-100 mt-1 mb-3" src="./image/dragfile.gif" alt="">
+                                        如果您已经有录音文件，可以将音频文件拖拽到时间线上。或使用文件选择器。<img style="height:50px" class="lazy"
+                                            data-src="./image/openfile.png" alt="">
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/dragfile.gif" alt="">
 
                                     </li>
                                 </ul>
@@ -178,7 +220,7 @@
                                 <ul>
                                     <li>
                                         <p>Umorsite 的界面设计直观，主要分为[ 左、中、右 ]三个核心区域，让您在创作时能高效地找到所需工具。这张图可以帮助您快速熟悉布局：</p>
-                                        <img class="w-100 mt-1 mb-3" src="./image/layout.png" alt="">
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/layout.png" alt="">
 
                                     </li>
                                 </ul>
@@ -211,7 +253,7 @@
                                     <li><strong>当您激活一个全局工具时：</strong> 如果您在时间线上方点击了“背景音乐闪避”之类的工具，这里就会显示该工具的详细参数设置。</li>
                                     <li><strong>当没有选择任何轨道上的音频时：</strong> 鼠标滑过工具栏，这里会显示工具的简要说明。</li>
 
-                                    <img class="w-100 mt-1 mb-3" src="./image/toolInfo.gif" alt="">
+                                    <img class="w-100 mt-1 mb-3 lazy" data-src="./image/toolInfo.gif" alt="">
                                 </ul>
 
                             </div>
@@ -230,8 +272,8 @@
                                 <h5>项目是如何保存的？我需要手动点击“保存”吗？</h5>
                                 <ul>
                                     <li>
-                                        需要您手动点击“保存项目”图标<img class="mx-3" style="height:50px"
-                                            src="./image/saveProject.png" alt="">
+                                        需要您手动点击“保存项目”图标<img class="mx-3 lazy" style="height:50px"
+                                            data-src="./image/saveProject.png" alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -241,21 +283,25 @@
                                 <ul>
                                     <li><strong>命名项目：</strong> 为您的项目起一个明确的名称，方便在项目列表中查找。</li>
                                     <li><strong>定期导出备份：</strong> 您可以随时将整个项目导出为一个备份文件，以便在其他电脑上导入并继续工作。</li>
-                                    <img class="w-75 mt-1 mb-3" src="./image/renamefile.png" alt="">
+                                    <img class="w-75 mt-1 mb-3 lazy" data-src="./image/renamefile.png" alt="">
                                     <li>由于所有数据保存在浏览器当中，当您在浏览器执行“删除浏览数据”（ctrl+shift+del）操作时，不要勾选“Cookies及其他网站数据”，以确保您的项目数据安全。
                                     </li>
 
-                                    <img class="w-50 mt-1 mb-3" src="./image/datasafe.png" alt="">
+                                    <img class="w-50 mt-1 mb-3 lazy" data-src="./image/datasafe.png" alt="">
                                     <p>或者你可以先执行“导出项目”，再执行删除浏览数据操作。</p>
                                     </li>
                                 </ul>
+
+                            </div>
+                            <div class="help-tip mb-5">
+                                <strong>小贴士：</strong> 请注意：项目与浏览器绑定。如果要跨设备编辑，请使用导出导入功能。目前无法直接云端同步。后期我们会逐渐加入这一功能。
                             </div>
                             <div class="help-card" id="sub-project-3">
                                 <h5>如何管理我的素材库？可以给素材分类吗？</h5>
                                 <ul>
                                     <li>
                                         所有的文件都在素材库里显示，可以手动修改素材类型。不同类型的素材，使用时会被放入不同类型的轨道
-                                        <img class="w-50 mt-1 mb-3" src="./image/material-library.gif" alt="">
+                                        <img class="w-50 mt-1 mb-3 lazy" data-src="./image/material-library.gif" alt="">
                                     </li>
                                     <li>
                                         把音频添加到编辑区 、“删除”等操作，就在这里进行
@@ -344,6 +390,7 @@
                                     <li>
                                         可以选择某局文本，重新进行语音合成，对应的音频也会被替换。
                                     </li>
+                                    <img class="w-100 mt-1 mb-3 lazy" data-src="./image/scriptEdit.gif" alt="">
 
                                 </ul>
                             </div>
@@ -378,80 +425,164 @@
 
 
                         </div>
-                        <div class="help-card" id="subsection-timeline-edit">
+                        <div id="subsection-timeline-edit">
                             <h4>时间线编辑</h4>
-                            <h5>如何在时间线上移动和排列音频片段？</h5>
-                            <ul>
-                                <li>
+                            <div class="help-card" id="sub-timeline-1">
+                                <h5>如何在时间线上移动和排列音频片段？</h5>
+                                <ul>
+                                    <li>
+                                        可以左右拖动音频，可以按alt+左键拖动复制，或者选中音频使用ctrl+c复制，ctrl+v粘贴。还可以跨轨道拖动或复制音频。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/clip-move.gif" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-timeline-2">
+                                <h5>如何裁剪音频片段的开头或结尾 (Trim)？</h5>
+                                <ul>
+                                    <li>
+                                        按住音频片段边缘，可以调整音频长短。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/clip-resize.gif" alt="">
 
-                                </li>
-                            </ul>
-                            <h5>如何裁剪音频片段的开头或结尾 (Trim)？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-timeline-3">
+                                <h5>如何将一个长的音频片段从中间分割成两段 (Split)？</h5>
+                                <ul>
+                                    <li>
+                                        选中音频，按S键，在播放头位置分割。或使用"剃刀"工具R键，在任意位置分割。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/clip-split.gif" alt="">
 
-                                </li>
-                            </ul>
-                            <h5>如何将一个长的音频片段从中间分割成两段 (Split)？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
 
-                                </li>
-                            </ul>
-                            <h5>如何删除一个或多个音频片段？</h5>
-                            <ul>
-                                <li>
+                            <div class="help-card" id="sub-track-2">
+                                <h5>如何调整单个音频片段音量？</h5>
+                                <ul>
+                                    <li>
+                                        选中音频，在右侧面板会显示音频音量，即可调整，双击音量滑块可复位。或按ctrl+左键， 拖动音频中央的细线，即可上下拖动，调整音量。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/clip-sound.gif" alt="">
 
-                                </li>
-                            </ul>
-                            <h5>如何为音频添加淡入和淡出效果？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-timeline-4">
+                                <h5>如何删除一个或多个音频片段？</h5>
+                                <ul>
+                                    <li>
+                                        选中一个或多个音频片段，按Del或Backspace键，删除。
+                                    </li>
+                                </ul>
+                            </div>
 
-                                </li>
-                            </ul>
+                            <div class="help-card" id="sub-timeline-5">
+                                <h5>如何为音频添加淡入和淡出效果？</h5>
+                                <ul>
+                                    <li>
+                                        点击音频片段，左上角和右上角的黄色三角，拖动，即可调整淡入和淡出。拖动范围越大，淡入和淡出效果越明显。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/clip-fade.gif" alt="">
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-timeline-6">
+                                <h5>如何左右滚动和缩放时间线？</h5>
+                                <ul>
+                                    <li>
+                                        可以按ctrl+鼠标滚轮，缩放时间线。按alt+鼠标滚轮，左右滚动。还可使用时间线窗口来操作。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/timeline-window.gif" alt="">
+
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
-                        <div class="help-card" id="subsection-track-edit">
+                        <div id="subsection-track-edit">
                             <h4>音轨操作</h4>
-                            <h5>如何添加、重命名或删除音轨？</h5>
-                            <ul>
-                                <li>
+                            <div class="help-card" id="sub-track-1">
+                                <h5>所有关于音轨的操作都在音轨面板</h5>
+                                <ul>
+                                    <li>
+                                        音轨面板位于时间线的右侧，显示当前音轨的名称、音量、音轨类型、立体声平衡等信息。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/track.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-track-1">
+                                <h5>如何添加、重命名或删除音轨？</h5>
+                                <ul>
+                                    <li>
+                                        将音频片段，拖入一个新区域，即可新建一条新轨道。当轨道为空时，在素材库添加不同分类的素材，人声、音乐、音效，即可新建不同分类的轨道。
+                                        点击轨道面板，选中轨道，按按Del或Backspace键，即可删除轨道。在轨道面板可重命名和重选轨道分类。
+                                        <img class="w-100 mt-1 mb-3 lazy" data-src="./image/track-info.gif" alt="">
 
-                                </li>
-                            </ul>
-                            <h5>如何调整单个片段或整个轨道的音量？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-track-2">
+                                <h5>如何调整单个片段或整个轨道的音量？</h5>
+                                <ul>
+                                    <li>
+                                        在轨道面板,左右拖动滑块,即可调整轨道音量。双击滑块可复位。
+                                        <img class="w-25 mt-1 mb-3 lazy" data-src="./image/track-sound.png" alt="">
 
-                                </li>
-                            </ul>
-                            <h5>如何让声音在左声道或右声道播放 (声像 Pan)？</h5>
-                            <ul>
-                                <li>
 
-                                </li>
-                            </ul>
-                            <h5>“静音 (Mute)”和“独奏 (Solo)”按钮有什么作用？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-track-3">
+                                <h5>如何让声音在左声道或右声道播放 (声像 Pan)？</h5>
+                                <ul>
+                                    <li>
+                                        调整‘立体声平衡’ ，拖动滑块向左或者向右，即可实现左右声道播放。
+                                        <img class="w-25 mt-1 mb-3 lazy" data-src="./image/channel.png" alt="">
 
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-track-4">
+                                <h5>“静音 (Mute)”和“独奏 (Solo)”按钮有什么作用？</h5>
+                                <ul>
+                                    <li>
+                                        当点击轨道“静音”时， 整个轨道会静音。当点击轨道“独奏”，当前轨道保持播放，其他轨道会静音。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-track-5">
+                                <h5>如何调整轨道音量曲线</h5>
+                                <ul>
+                                    <li>
+                                        在轨道面板，打开“轨道音量自动化面板”
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+
                         </div>
-                        <div class="help-card" id="subsction-advanced-mode">
+                        <div id="subsction-advanced-mode">
                             <h3>高级模式</h3>
-                            <h5>什么是“涟漪编辑 (Ripple Edit)”模式？它有什么用？</h5>
-                            <ul>
-                                <li>
+                            <div class="help-card" id="sub-advanced-1">
+                                <h5>什么是“涟漪编辑 (Ripple Edit)”模式？它有什么用？</h5>
+                                <ul>
+                                    <li>
 
-                                </li>
-                            </ul>
-                            <h5>什么是“滑移 (Slip Edit)”工具？我应该在什么时候使用它？</h5>
-                            <ul>
-                                <li>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="help-card" id="sub-advanced-2">
+                                <h5>什么是“滑移 (Slip Edit)”工具？我应该在什么时候使用它？</h5>
+                                <ul>
+                                    <li>
 
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+
                         </div>
                     </section>
 
@@ -664,11 +795,51 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
 
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.onload = () => {
+                                lazyImage.classList.add('loaded');
+                            };
+                            lazyImage.classList.remove('lazy');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function (lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for older browsers
+                lazyImages.forEach(img => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    img.classList.add('loaded');
+                });
+            }
+        });
+    </script>
 
 </body>
 
 <style>
+    img.lazy {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    img.loaded {
+        opacity: 1;
+    }
+
     :root {
         --background-color: #121212;
         --text-primary: #ffffff;
